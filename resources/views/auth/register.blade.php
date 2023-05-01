@@ -110,7 +110,7 @@
                 </div>
                   <div class="form-group text-center row mt-3 pt-1">
                     <button class="btn btn-primary btn-user btn-block" type="submit">Register</button>
-                </div>
+                  </div>
             </div>
               </form>
               <hr>

@@ -99,7 +99,10 @@
                   <form class="user" method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="form-group">
-                      <input type="email" class="form-control form-control-user" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                      <input type="text" class="form-control form-control-user" id="name" name="name" placeholder="User Name">
+                    </div>
+                    <div class="form-group">
+                      <input type="email" class="form-control form-control-user" id="email" name="email" placeholder="Email">
                     </div>
                     <div class="form-group">
                       <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
@@ -116,10 +119,14 @@
                   </form>
                   <hr>
                   <div class="text-center">
-                    <a class="small" href="forgot-password.html">Forgot Password?</a>
+                    @if (Route::has('password.request'))
+                    <a class="small" href="{{ route('password.request') }}">{{ __('Forgot your password?') }}</a>
+                    @endif
                   </div>
                   <div class="text-center">
-                    <a class="small" href="register.html">Create an Account!</a>
+                    @if (Route::has('password.request'))
+                    <a class="small" href="{{ route('register') }}">{{ __('Create an Account!') }}</a>
+                    @endif
                   </div>
                 </div>
               </div>
