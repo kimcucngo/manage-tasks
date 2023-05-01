@@ -69,7 +69,7 @@
   <title>SB Admin 2 - Login</title>
 
   <!-- Custom fonts for this template-->
-  <link href=""{{asset('frontend/css/all.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="{{asset('frontend/css/all.min.css')}}" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
@@ -96,15 +96,13 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Wellcome to RinPage!</h1>
                   </div>
-                  <form class="user">
+                  <form class="user" method="POST" action="{{ route('login') }}">
+                    @csrf
                     <div class="form-group">
-                        <input type="name" class="form-control form-control-user" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter Your Name...">
-                      </div>
-                    <div class="form-group">
-                      <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                      <input type="email" class="form-control form-control-user" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter Email Address...">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                      <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
                     </div>
                     <div class="form-group">
                       <div class="custom-control custom-checkbox small">
@@ -112,9 +110,9 @@
                         <label class="custom-control-label" for="customCheck">Remember Me</label>
                       </div>
                     </div>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block">
-                      Login
-                    </a>
+                    <div class="form-group text-center row mt-3 pt-1">
+                      <button class="btn btn-primary btn-user btn-block" type="submit">Login</button>
+                    </div>
                   </form>
                   <hr>
                   <div class="text-center">
