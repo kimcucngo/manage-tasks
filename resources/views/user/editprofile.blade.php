@@ -113,6 +113,71 @@
             </div>
         </div>
     </div>
+    {{-- content --}}
+    <div class="main-content">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <br /><br />
+                            <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                            <div class="row mb-3">
+                              <div class="p-5">
+                                <div class="text-center">
+                                  <h1 class="h4 text-gray-900 mb-4">Edit Profile</h1>
+                                </div>
+                                <form class="user" method="POST" action="{{ route('post.edit.profile') }}">
+                                  @csrf
+                                  <div class="form-group">
+                                    <label
+                                    for="example-text-input"
+                                    class="col-sm-2 col-form-label"
+                                    >Name</label>
+                                    <input 
+                                    type="text" 
+                                    class="form-control form-control-user" 
+                                    id="name" 
+                                    name="name" 
+                                    value="{{ $userData->name }}"
+                                    placeholder="User Name">
+                                  </div>
+                                  <div class="form-group">
+                                    <label
+                                    for="example-text-input"
+                                    class="col-sm-2 col-form-label"
+                                    >Email</label>
+                                    <input 
+                                    type="text" 
+                                    class="form-control form-control-user" 
+                                    id="email" 
+                                    name="email" 
+                                    value="{{ $userData->email }}"
+                                    placeholder="Email">
+                                  </div>
+                                  <div class="form-group">
+                                    <label
+                                    for="example-text-input"
+                                    class="col-sm-2 col-form-label"
+                                    >Profile Images</label>
+                                    <input
+                                        name="profile_image"
+                                        class="form-control"
+                                        type="file"
+                                        id="image"
+                                    />
+                                  </div>
+                                  <div class="form-group text-center row mt-3 pt-1">
+                                    <button class="btn btn-primary btn-user btn-block" type="submit">Edit Profile</button>
+                                  </div>
+                                </form>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
     <!-- /Right-bar -->
     <footer class="footer">
         <div class="container-fluid">
@@ -131,6 +196,7 @@
             </div>
         </div>
     </footer>
+</div>
     <!-- Right bar overlay-->
     <div class="rightbar-overlay"></div>
 

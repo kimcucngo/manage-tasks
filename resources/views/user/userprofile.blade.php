@@ -113,6 +113,43 @@
             </div>
         </div>
     </div>
+    {{-- content --}}
+
+    <div class="main-content">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <br /><br />
+                            <center>
+                                <img
+                                    class="rounded-circle avatar-xl"
+                                    src=""
+                                    alt="Card image cap"
+                                />
+                            </center>
+        
+                            <div class="card-body">
+                                <h4 class="card-title">Name :{{$userData->name}}</h4>
+                                <hr />
+                                <h4 class="card-title">
+                                    User Email :{{$userData->email}}
+                                </h4>
+                                <hr />
+        
+                                <a
+                                    href="{{route('user.edit.profile')}}"
+                                    class="btn btn-info btn-rounded waves-effect waves-light"
+                                >
+                                    Edit Profile</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     <!-- /Right-bar -->
     <footer class="footer">
         <div class="container-fluid">
@@ -131,6 +168,7 @@
             </div>
         </div>
     </footer>
+</div>
     <!-- Right bar overlay-->
     <div class="rightbar-overlay"></div>
 
