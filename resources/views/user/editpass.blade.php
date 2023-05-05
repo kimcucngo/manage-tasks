@@ -73,9 +73,8 @@
                         <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-end">
-                        {{-- @if (Route::has('password.request')) --}}
                         <a class="dropdown-item" href="{{ route('user.profile') }}"><i class="ri-user-line align-middle me-1"></i> Profile</a>
-                        <a class="dropdown-item" href="{{ route('user.editPass') }}"><i class="ri-wallet-2-line align-middle me-1"></i> Change
+                        <a class="dropdown-item" href=""><i class="ri-wallet-2-line align-middle me-1"></i> Change
                             Password</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item text-danger" href="{{ route('logoutpage') }}">
@@ -113,6 +112,69 @@
             </div>
         </div>
     </div>
+    {{-- content --}}
+    <div class="main-content">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <br /><br />
+                            <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                            <div class="row mb-3">
+                              <div class="p-5">
+                                <div class="text-center">
+                                  <h1 class="h4 text-gray-900 mb-4">Change Password</h1>
+                                </div>
+                                <form class="user" method="POST" action="{{ route('post.editPass') }}">
+                                  @csrf
+                                  <div class="form-group">
+                                    <label
+                                    for="example-text-input"
+                                    class="col-sm-2 col-form-label"
+                                    >Old Password</label>
+                                    <input 
+                                    type="password" 
+                                    class="form-control form-control-user" 
+                                    id="oldpassword" 
+                                    name="oldpassword" 
+                                    placeholder="Old Password">
+                                  </div>
+                                  <div class="form-group">
+                                    <label
+                                    for="example-text-input"
+                                    class="col-sm-2 col-form-label"
+                                    >New Password</label>
+                                    <input 
+                                    type="password" 
+                                    class="form-control form-control-user" 
+                                    id="newpassword" 
+                                    name="newpassword" 
+                                    placeholder="New Password">
+                                  </div>
+                                  <div class="form-group">
+                                    <label
+                                    for="example-text-input"
+                                    class="col-sm-2 col-form-label"
+                                    >Confirm New Password</label>
+                                    <input 
+                                    type="password" 
+                                    class="form-control form-control-user" 
+                                    id="confirmpassword" 
+                                    name="confirmpassword" 
+                                    placeholder="Confirm New Password">
+                                  </div>
+                                  <div class="form-group text-center row mt-3 pt-1">
+                                    <button class="btn btn-primary btn-user btn-block" type="submit">Change Password</button>
+                                  </div>
+                                </form>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
     <!-- /Right-bar -->
     <footer class="footer">
         <div class="container-fluid">
@@ -131,6 +193,7 @@
             </div>
         </div>
     </footer>
+</div>
     <!-- Right bar overlay-->
     <div class="rightbar-overlay"></div>
 

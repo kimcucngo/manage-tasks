@@ -75,10 +75,10 @@
                     <div class="dropdown-menu dropdown-menu-end">
                         {{-- @if (Route::has('password.request')) --}}
                         <a class="dropdown-item" href="{{ route('user.profile') }}"><i class="ri-user-line align-middle me-1"></i> Profile</a>
-                        <a class="dropdown-item" href=""><i class="ri-wallet-2-line align-middle me-1"></i> Change
+                        <a class="dropdown-item" href="{{ route('user.editPass') }}"><i class="ri-wallet-2-line align-middle me-1"></i> Change
                             Password</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-danger" href="">
+                        <a class="dropdown-item text-danger" href="{{ route('logoutpage') }}">
                             <i class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout</a>
                     </div>
                 </div>
@@ -161,10 +161,10 @@
                                     class="col-sm-2 col-form-label"
                                     >Profile Images</label>
                                     <input
-                                        name="profile_image"
-                                        class="form-control"
-                                        type="file"
-                                        id="image"
+                                    name="profile_image"
+                                    class="form-control"
+                                    type="file"
+                                    id="image"
                                     />
                                   </div>
                                   <div class="form-group text-center row mt-3 pt-1">

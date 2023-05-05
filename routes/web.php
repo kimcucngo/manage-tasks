@@ -28,3 +28,6 @@ require __DIR__.'/auth.php';
 Route::get('/user/profile', [UserController::class, 'profile'])->name('user.profile');
 Route::get('/user/profile/edit', [UserController::class, 'editProfile'])->name('user.edit.profile');
 Route::post('/user/profile/post', [UserController::class, 'postEditProfile'])->name('post.edit.profile');
+Route::get('/user/editPass', [UserController::class, 'editPass'])->name('user.editPass');
+Route::post('/user/postPass', [UserController::class, 'postPass'])->name('post.editPass');
+Route::get('/user/logout', [UserController::class, 'logoutPage'])->name('logoutpage');
